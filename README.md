@@ -22,28 +22,33 @@ The GibbsSampler is a probabilistic method that uses iterative sampling to impro
 - `RepeatedGibbsSampler(Dna, k, t, N, times)`: Repeatedly runs the Gibbs Sampler algorithm to find the best motifs.
 - -------------------------------------------------------------------------------------------------------------------------
 example usage:
-
 from gibbs_sampler import RepeatedGibbsSampler
+Sample DNA sequences
 
-# Input DNA sequences
 sequences = [
-    "TCGGGGGTTTTT",
-    "CCGGTGACTTAC",
-    "ACGGGGATTTTC",
-    "TTGGGGACTTTT",
-    "AAGGGGACTTCC"
+"TCGGGGGTTTTT",
+"CCGGTGACTTAC",
+"ACGGGGATTTTC",
+"TTGGGGACTTTT",
+"AAGGGGACTTCC"
 ]
+Find 6bp motifs with 100 iterations and 20 restarts
 
-# Find 6bp motifs running 100 iterations with 20 restarts
 best_motifs = RepeatedGibbsSampler(
-    Dna=sequences,
-    k=6,          # motif length
-    t=5,          # sequence count
-    N=100,        # iterations per run
-    times=20      # random restarts
+Dna=sequences,
+k=6,
+t=5,
+N=100,
+times=20
 )
 
-print(f"Consensus motif: {Consensus(best_motifs)}")
+print("Best motifs found:", best_motifs)
+print("Consensus sequence:", Consensus(best_motifs))
+#    1. Basic import of the main function
+#    2. Example DNA input (5 sequences)
+#    3. Typical parameter values
+#    4. Simple output of results
+
 -----------------------------------------------------------------------------------------------------------------------------
 references:
 
