@@ -20,3 +20,27 @@ The GibbsSampler is a probabilistic method that uses iterative sampling to impro
 - `WeightedDie(Probabilities)`: Simulates a weighted die roll based on a dictionary of probabilities.
 - `ProfileGeneratedKmer(Text, profile, k)`: Generates a k-mer from text based on a profile matrix.
 - `RepeatedGibbsSampler(Dna, k, t, N, times)`: Repeatedly runs the Gibbs Sampler algorithm to find the best motifs.
+- -------------------------------------------------------------------------------------------------------------------------
+example usage:
+
+from gibbs_sampler import RepeatedGibbsSampler
+
+# Input DNA sequences
+sequences = [
+    "TCGGGGGTTTTT",
+    "CCGGTGACTTAC",
+    "ACGGGGATTTTC",
+    "TTGGGGACTTTT",
+    "AAGGGGACTTCC"
+]
+
+# Find 6bp motifs running 100 iterations with 20 restarts
+best_motifs = RepeatedGibbsSampler(
+    Dna=sequences,
+    k=6,          # motif length
+    t=5,          # sequence count
+    N=100,        # iterations per run
+    times=20      # random restarts
+)
+
+print(f"Consensus motif: {Consensus(best_motifs)}")
