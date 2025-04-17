@@ -44,3 +44,11 @@ best_motifs = RepeatedGibbsSampler(
 )
 
 print(f"Consensus motif: {Consensus(best_motifs)}")
+-----------------------------------------------------------------------------------------------------------------------------
+references:
+
+    Lawrence et al. (1993) Science 262(5131):208-214
+
+    Bioinformatics Algorithms (Compeau & Pevzner, 2015)
+
+    UC San Diego CSE 181 Course Materials
