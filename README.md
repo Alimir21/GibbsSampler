@@ -44,10 +44,12 @@ times=20
 
 print("Best motifs found:", best_motifs)
 print("Consensus sequence:", Consensus(best_motifs))
-#    1. Basic import of the main function
-#    2. Example DNA input (5 sequences)
-#    3. Typical parameter values
-#    4. Simple output of results
+
+this shows:
+    1. Basic import of the main function
+    2. Example DNA input (5 sequences)
+    3. Typical parameter values
+    4. Simple output of results
 
 -----------------------------------------------------------------------------------------------------------------------------
 references:
